@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define UNSPECIFIED(x) (void)(x)
+#define UNUSED(x) (void)(x)
 #define BUFFER_SIZE 1024
 
 /* FLAGS */
@@ -96,9 +96,9 @@ int writing_char(char c, char buffer[],
 int write_number(int is_negative, int ind, char buffer[],
         int flags, int width, int precision, int size);
 int write_num(int ind, char buffer[],
-        int flags, int width, int prec,
-        int length, char padd, char extra_c)
-int write_unsigned(int is_negative, int ind,
+        int flags, int width, int precision,
+        int length, char padding, char extra_c);
+int write_unsigned(int is_negative, int index,
         char buffer[],
         int flags, int width, int precision, int size);
 int write_pointer(char buffer[], int index, int length,
