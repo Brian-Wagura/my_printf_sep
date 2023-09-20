@@ -8,6 +8,7 @@
  *
  * Return: width.
  */
+
 int handle_width(const char *format, int *x, va_list list)
 {
 	int curr_i;
