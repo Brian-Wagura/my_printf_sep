@@ -51,7 +51,7 @@ int print_octal(va_list types, char buffer[],
         unsigned long int num = va_arg(types, unsigned long int);
         unsigned long int init_num = num;
 
-        UNSPECIFIED(width);
+        UNUSED(width);
 
         num = convert_size_unsigned(num, size);
 
@@ -88,7 +88,7 @@ int print_octal(va_list types, char buffer[],
 int print_hexadecimal(va_list types, char buffer[],
         int flags, int width, int precision, int size)
 {
-        return (print_hex(types, "0123456789abcdef", buffer,
+        return (print_hex(types, "0123456789abcdef", char,
                 flags, 'x', width, precision, size));
 }
 
@@ -103,9 +103,9 @@ int print_hexadecimal(va_list types, char buffer[],
  * Return: Number of chars printed
  */
 int print_hexa_caps(va_list types, char buffer[],
-        int flags, int width, int precision, int size)
+        char flags, int width, int precision, int size)
 {
-        return (print_hexa(types, "0123456789ABCDEF", buffer,
+        return (print_hexa_caps(types, "0123456789ABCDEF", char,
                 flags, 'X', width, precision, size));
 }
 
@@ -130,7 +130,7 @@ int print_hex(va_list types, char map_to[], char buffer[],
         unsigned long int num = va_arg(types, unsigned long int);
         unsigned long int init_num = num;
 
-        UNSPECIFIED(width);
+        UNUSED(width);
 
         num = convert_size_unsigned(num, size);
 
