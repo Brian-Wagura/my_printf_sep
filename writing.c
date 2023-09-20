@@ -51,6 +51,7 @@ int writing_char(char c, char buffer[],
  *
  * Return: Number of chars printed.
  */
+
 int write_number(int is_negative, int ind, char buffer[],
 		int flags, int width, int precision, int size)
 {
@@ -83,6 +84,7 @@ int write_number(int is_negative, int ind, char buffer[],
  *
  * Return: Number of printed chars.
  */
+
 int write_num(int ind, char buffer[],
 		int flags, int width, int prec,
 		int length, char padd, char extra_c)
